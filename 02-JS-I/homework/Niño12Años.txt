@@ -1,0 +1,8 @@
+Variable: Lugar donde guardaremos un dato. Las creamos escribiendo en el código la palabra "var" un espacio y luego el nombre que queremos darle a la variable. Le escribimos un = y seguidamente el dato que queremos almacenar en esa variable para consultarlo después.
+Strings: Es una clase de dato para guardar palabras. Lo escribimos entre comillas Ej.: "carro" "Manchas","fac-23"
+Por ejemplo si quisieramos guardar este string en una variable llamada NombrePerro escribimos un código así:
+var NombrePerro = "Manchas";
+Funciones: Una función es una acción que le pedimos que efectúe. Debemos crear la finción declarandola con la palara "function " luego escribimos el nombre, entre parentesis los datos que cambiarán cada que la ejecutemos y lo que pedimos que debe hacer con losargumentos o datos que lew hemos pasado.
+escribimos en el código de una función la palabra "return" para solicitar el resultado que queremos obtener después de ejecutada la función:
+Dentro del proceso que deseamos que se efectúe en una función podemos establecer diferentes caminos dependiendo de alguna condición. Para esto usaremos la palabra "if" y a continuaciión la expresión a evaluar. Si la rspuesta es verdadero se ejecuta la primera opción y terminamos. Si es falso saltamos a la segunda opción.
+Para evaluar una expresión como falsa o verdadera usamos los oeradores de comparación: <, >, <=, >=, ==, ===, !===, y la respuesta es "true" o "false" valores conocidos como Booleanos

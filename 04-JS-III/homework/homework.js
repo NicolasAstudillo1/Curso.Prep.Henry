@@ -81,7 +81,6 @@ function agregarNumeros(numeros) {
     const element = element + array[i];
   }
   return element;
-  }
 }
 
 

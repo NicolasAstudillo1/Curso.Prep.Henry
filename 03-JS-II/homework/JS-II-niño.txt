@@ -1,0 +1,22 @@
+
+for
+
+En programación es común que queramos ejecutar una tarea una vez tras otra, una gran cantidad de veces, hasta miles de veces. A esto lo llamamos bucles. Uno de estos es el for donde le decimos cuantas veces se debe repetir una tarea. Lo usamos así:
+Escribimos la palabra clave for y seguidamente dentro de paréntesis 3 instrucciones necesarias separadas por punto y coma. La primera es una variable que creamos para este bucle. La segunda le damos una condición que dice hasta dónde queremos que nuestro contador vaya aumentando. Y la tercera le decimos cuánto aumentará nuestro contador en cada iteración.seguidamente abrimos las llaves y decimos que instrucciones debe repetir vez tras vez y cerramos llaves.
+
+Operadores lógicos : &&, ||  y  !
+
+Una comparación puede ser falsa o verdadera. Pero si evaluamos dos comparaciones juntas podemos usar operadores para saber cómo evaluarlas. A estos conectores de comparaciones los llamamos operadores lógicos y son:
+
+&& (que se lee: Y )
+|| (que se lee: O )
+!  ( que se lee NO)
+
+Los usamos así por ejemplo para evaluar un condicional if:
+ 
+If (100>10 && 4>5) diríamos que la expresión es FALSE porque con && AMBAS deben ser verdaderas par decir que es TRUE
+
+If (100>10 || 4>5) diríamos que la expresión es TRUE porque con || con una que sea verdad decimos que es TRUE
+
+If (!(100> 10)) evaluaríamos la expresión como FALSE porque el ! niega la expresión que está en el paréntesis.
+

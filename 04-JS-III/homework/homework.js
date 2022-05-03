@@ -69,7 +69,7 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-  return array.indexOf(elemento)>0;
+  return array.indexOf(elemento) >= 0;
 }
 
 
@@ -117,7 +117,7 @@ function multiplicarArgumentos() {
   var producto = 1 ;
   if(arguments.length === 0){return 0;}
   for (let i=0; i< arguments.length; i++){
-    producto = producto * argument[i];
+    producto = producto * arguments[i];
   }
   return producto;
 }
@@ -138,7 +138,7 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
-  if (numeroDeDia % 7 === 0 || numeroDeDia + 1 % 7 === 0)
+  if (numeroDeDia === 1 || numeroDeDia % 7 === 0 || numeroDeDia - 1 % 7 === 0)
   {return "Es fin de semana";}
   return "Es dia Laboral";
   
@@ -149,13 +149,13 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  for (let i = 0; n > Math.pow(10, i); i++) {
-    if (Math.pow(10, i) <= n && n >= Math.pow(10, i+1)) {
-      if (n + Math.pow(10,i) <= Math.pow(10,i+1)) {
+  for (let i = 0; i<1000; i++) {
+    if (Math.pow(10, i) <= n && n <= Math.pow(10, i+1)) {
+      if (n + Math.pow(10,i) >= Math.pow(10,i+1)) {
         return true;
       }
   return false;}
-  return false}
+  return false;}
 }
 
 
@@ -163,6 +163,7 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
+  if (arreglo.length ===0 || arreglo.length === 1){return true;}
   for (let i = 0; i < arreglo.length; i++) {
     if(arreglo[i] !== arreglo[i+1]) {return false;}
     }
@@ -175,12 +176,12 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
-  let copiaArray = array.slice();
-  if(array.includes("Enero") !== true) {return "No se encontraron los meses pedidos";}
-    if(array.includes("Marzo") !== true) {return "No se encontraron los meses pedidos";}
-      if(array.includes("Noviembre") !== true) {return "No se encontraron los meses pedidos";}
-      return copiaArray;
-
+  let encontradosArray = [];
+  if(array.includes("Enero")) {encontradosArray.push("Enero");}
+  if(array.includes("Marzo")) {encontradosArray.push("Marzo");}
+  if(array.includes("Noviembre")) {encontradosArray.push("Noviembre");}
+  if(encontradosArray.length === 3){return encontradosArray}
+  return encontradosArray, "No se encontraron los meses pedidos";
 }
 
 
@@ -208,11 +209,11 @@ function breakStatement(numero) {
   // Tu código:
   let arrayAumentado = [];
  for (let i = 0; i < 9; i++) {
+  numero = numero + 2;
    arrayAumentado.push(numero);
-   if( numero === i+1){
-    return "Se interrumpió la ejecución";
-    break;}
-   numero = numero + 2;
+   if( numero === i+1) break;{
+    return arrayAumentado, "Se interrumpió la ejecución";
+  }
   }
   return arrayAumentado;
 }
@@ -227,10 +228,9 @@ function continueStatement(numero) {
   // Tu código:
   let arrayAumentado = [];
  for (let i = 0; i < 9; i++) {
-   arrayAumentado.push(numero);
-   if( 5 === i+1){
-    continue;}
-   numero = numero + 2;
+  numero = numero + 2;
+  if(i+1 === 5) continue;
+  arrayAumentado.push(numero);
   }
   return arrayAumentado;
 }

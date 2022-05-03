@@ -149,6 +149,7 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
+  n = n * Math.sign(n);
   for (let i = 0; i<20; i++) {
     if (Math.pow(10, i) <= n && n <= Math.pow(10, i+1)) {
       if (n + Math.pow(10,i) >= Math.pow(10,i+1)) {return true;}
@@ -176,11 +177,12 @@ function mesesDelAño(array) {
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
   let encontradosArray = [];
-  if(array.includes("Enero")) {encontradosArray.push("Enero");}
-  if(array.includes("Marzo")) {encontradosArray.push("Marzo");}
-  if(array.includes("Noviembre")) {encontradosArray.push("Noviembre");}
-  if(encontradosArray.length >= 3 ){return encontradosArray;}
-  return encontradosArray, "No se encontraron los meses pedidos";
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre" )
+    {encontradosArray.push(array[i]);}
+    if (encontradosArray.length > 3){return "No se encontraron los meses pedidos"};
+    return encontradosArray;
+  }
 }
 
 
@@ -209,11 +211,10 @@ function breakStatement(numero) {
   let arrayAumentado = [];
  for (let i = 0; i < 10; i++) {
   numero = numero + 2;
-   arrayAumentado.push(numero);
-   if( numero === i+1) break;{
-    return arrayAumentado, "Se interrumpió la ejecución";
-  }
-  }
+  if( numero === i+1) break;
+  arrayAumentado.push(numero);}
+  if(i < 10){
+   return "Se interrumpió la ejecución";}
   return arrayAumentado;
 }
 

@@ -149,13 +149,11 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  for (let i = 0; i<1000; i++) {
+  for (let i = 0; i<20; i++) {
     if (Math.pow(10, i) <= n && n <= Math.pow(10, i+1)) {
-      if (n + Math.pow(10,i) >= Math.pow(10,i+1)) {
-        return true;
-      }
-  return false;}
-  return false;}
+      if (n + Math.pow(10,i) >= Math.pow(10,i+1)) {return true;}
+      return false;}
+  }
 }
 
 
@@ -163,8 +161,9 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  if (arreglo.length ===0 || arreglo.length === 1){return true;}
-  for (let i = 0; i < arreglo.length; i++) {
+  if (arreglo.length === 0){return false;};
+  if (arreglo.length === 1 ){return false;};
+  for (let i = 0; i < arreglo.length -1; i++) {
     if(arreglo[i] !== arreglo[i+1]) {return false;}
     }
     return true;
@@ -180,7 +179,7 @@ function mesesDelAño(array) {
   if(array.includes("Enero")) {encontradosArray.push("Enero");}
   if(array.includes("Marzo")) {encontradosArray.push("Marzo");}
   if(array.includes("Noviembre")) {encontradosArray.push("Noviembre");}
-  if(encontradosArray.length === 3){return encontradosArray}
+  if(encontradosArray.length >= 3 ){return encontradosArray;}
   return encontradosArray, "No se encontraron los meses pedidos";
 }
 
@@ -208,7 +207,7 @@ function breakStatement(numero) {
   //Pista: usá el statement 'break'
   // Tu código:
   let arrayAumentado = [];
- for (let i = 0; i < 9; i++) {
+ for (let i = 0; i < 10; i++) {
   numero = numero + 2;
    arrayAumentado.push(numero);
    if( numero === i+1) break;{
@@ -227,7 +226,7 @@ function continueStatement(numero) {
   //Pista: usá el statement 'continue'
   // Tu código:
   let arrayAumentado = [];
- for (let i = 0; i < 9; i++) {
+ for (let i = 0; i < 10; i++) {
   numero = numero + 2;
   if(i+1 === 5) continue;
   arrayAumentado.push(numero);

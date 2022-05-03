@@ -38,7 +38,7 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // y devuelve el array
   // Tu código:
   array.push(elemento);
-  return array
+  return array;
 }
 
 
@@ -101,7 +101,7 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-  let masGrande = numeros[1] ;
+  let masGrande = numeros[0] ;
   for( let i=0; i< numeros.length; i++){
     if (masGrande < numeros[i]) { masGrande = numeros[i];
     }
@@ -118,8 +118,9 @@ function multiplicarArgumentos() {
   if(arguments.length === 0){return 0;}
   for (let i=0; i< arguments.length; i++){
     producto = producto * argument[i];
-  }return producto;
-
+  }
+  return producto;
+}
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
@@ -166,8 +167,6 @@ function todosIguales(arreglo) {
     if(arreglo[i] !== arreglo[i+1]) {return false;}
     }
     return true;
-  }
-  
 } 
 
 

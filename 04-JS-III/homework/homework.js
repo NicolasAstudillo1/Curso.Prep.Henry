@@ -180,9 +180,9 @@ function mesesDelAño(array) {
   for (let i = 0; i < array.length; i++) {
     if (array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre" )
     {encontradosArray.push(array[i]);}
-    if (encontradosArray.length > 3){return "No se encontraron los meses pedidos"};
-    return encontradosArray;
   }
+    if (encontradosArray.length === 3){return encontradosArray};
+    return "No se encontraron los meses pedidos";
 }
 
 

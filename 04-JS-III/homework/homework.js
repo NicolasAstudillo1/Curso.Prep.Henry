@@ -211,10 +211,9 @@ function breakStatement(numero) {
   let arrayAumentado = [];
  for (let i = 0; i < 10; i++) {
   numero = numero + 2;
-  if( numero === i+1) break;
+  if( numero === i+1) {break;}
   arrayAumentado.push(numero);}
-  if(i < 10){
-   return "Se interrumpió la ejecución";}
+  if(i < 10){return "Se interrumpió la ejecución", arrayAumentado;}
   return arrayAumentado;
 }
 
@@ -229,7 +228,7 @@ function continueStatement(numero) {
   let arrayAumentado = [];
  for (let i = 0; i < 10; i++) {
   numero = numero + 2;
-  if(i+1 === 5) continue;
+  if(i+1 === 5) {continue;}
   arrayAumentado.push(numero);
   }
   return arrayAumentado;

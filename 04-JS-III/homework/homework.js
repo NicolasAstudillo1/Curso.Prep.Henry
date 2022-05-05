@@ -228,9 +228,8 @@ function continueStatement(numero) {
   let arrayAumentado = [];
  for (let i = 0; i < 10; i++) {
   numero = numero + 2;
-  if (i === 4)continue;
   arrayAumentado.push(numero);
-  }
+   if (i === 4)continue;}
   return arrayAumentado;
 }
 

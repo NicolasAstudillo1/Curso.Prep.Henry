@@ -226,14 +226,18 @@ function continueStatement(numero) {
   //Pista: usá el statement 'continue'
   // Tu código:
   let arrayAumentado = [];
- for (let i = 0; i < 10; i++) {
-  numero = numero + 2;
-  arrayAumentado.push(numero);
-   if (i === 4)continue;}
+  var i =0;
+  while (i<10) {
+    i++;
+    if (i=== 5){
+      continue ;
+    }
+    numero = numero+2;
+    arrayAumentado.push (numero);
+  }
   return arrayAumentado;
+
 }
-
-
 
 // No modificar nada debajo de esta línea
 // --------------------------------

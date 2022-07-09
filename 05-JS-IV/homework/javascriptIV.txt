@@ -1,0 +1,6 @@
+Objetos son colecciones de datos y funciones relacionados
+Las propiedades son los nombres de los datos en un objeto, también llamado clave
+Los métodos son propiedades de un objeto que contienen funciones propias del objeto
+El bucle for_in es un bucle diseñado para iterar con las propiedades de un objeto
+A las propiedades de los objetos podemos referirnos con dos notaciones: de punto y de corchetes cada una tiene sus ventajas. Con la notación de corchetes podemos utilizar variables que apunten al valor de ello. Eso no es posible con la notación de punto.
+La palabra clave “this” hace referencia al objeto en el que se esta escribiendo el código
